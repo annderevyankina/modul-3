@@ -70,18 +70,27 @@
     <script src="jquery-3.6.3.min.js" type="text/javascript"></script>
     <script type="text/javascript">
     $(document).ready(function() {
+      // глаза
       $(".eyes").click(function(){
   		  $(".eyes").addClass("rounded");
       });
       $(".rounded").click(function(){
   		  $(".eyes").addClass("rect");
       });
+      $(".rect").click(function(){
+        $(".eyes").removeClass("rect, rounded");
+      });
+      // рот
       $(".mouth").click(function(){
   		  $(".mouth").addClass("rotation");
       });
       $(".rotation").click(function(){
   		  $(".mouth").addClass("rounded2");
       });
+      $(".rounded2").click(function(){
+  		  $(".mouth").removeClass("rounded2, rotation");
+      });
+      // лицо и подпись
       $(".face").click(function(){
   		  $(".face").addClass("elegant");
       });
@@ -93,6 +102,12 @@
       });
       $(".elegant").click(function(){
   		  $(".desc").html("ЯРКИЙ");
+      });
+      $(".bright").click(function(){
+  		  $(".face").removeClass("bright, elegant");
+      });
+      $(".bright").click(function(){
+  		  $(".desc").html("НЕЖНЫЙ");
       });
     });
     </script>
