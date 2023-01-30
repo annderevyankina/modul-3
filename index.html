@@ -1,1 +1,107 @@
-
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>JQuery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <style media="screen">
+      body {
+        font-family: 'Roboto', sans-serif;
+      }
+      .eyes {
+        width: 150px;
+        height: 150px;
+        background: yellow;
+        display: inline-block;
+        position: absolute;
+        top: 150px;
+        left: 100px;
+      }
+      .two {
+        left: 360px;
+      }
+      .rounded {
+        border-radius: 100%;
+        background: green;
+      }
+      .rect {
+        height: 50px;
+        background: black;
+      }
+      .mouth {
+        width: 300px;
+        height: 150px;
+        border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+        background: blue;
+        position: absolute;
+        top: 350px;
+        left: 160px;
+      }
+      .rotation {
+        border-radius: 0 0 50% 50% / 0 0 100% 100%;
+        background: orange;
+      }
+      .rounded2 {
+        height: 300px;
+        border-radius: 100%;
+        background: red;
+      }
+      .face {
+        width: 600px;
+        height: 600px;
+        background: pink;
+        border-radius: 100%;
+        display: flex;
+      }
+      .elegant {
+        background: plum;
+      }
+      .bright {
+        background: yellowgreen;
+      }
+      .desc {
+        position: absolute;
+        top: 615px;
+        left: 275px;
+      }
+    </style>
+    <script src="jquery-3.6.3.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+      $(".eyes").click(function(){
+  		  $(".eyes").addClass("rounded");
+      });
+      $(".rounded").click(function(){
+  		  $(".eyes").addClass("rect");
+      });
+      $(".mouth").click(function(){
+  		  $(".mouth").addClass("rotation");
+      });
+      $(".rotation").click(function(){
+  		  $(".mouth").addClass("rounded2");
+      });
+      $(".face").click(function(){
+  		  $(".face").addClass("elegant");
+      });
+      $(".face").click(function(){
+  		  $(".desc").html("ЭЛЕГАНТНЫЙ");
+      });
+      $(".elegant").click(function(){
+  		  $(".face").addClass("bright");
+      });
+      $(".elegant").click(function(){
+  		  $(".desc").html("ЯРКИЙ");
+      });
+    });
+    </script>
+  </head>
+  <body>
+    <div class="face"></div>
+    <div class="eyes one"></div>
+    <div class="eyes two"></div>
+    <div class="mouth"></div>
+    <p class="desc">НЕЖНЫЙ</p>
+  </body>
+</html>
